@@ -5,12 +5,11 @@
 <hibernate-mapping>
     <class name="course.springdata.hibernate.entity.Student" table="students">
         <meta attribute="class-description"> <!-- optional -->
-            This class models an active student in e-learning system
-        </meta>
+            This class models an active student in e-learning system</meta>
         <id name="id" column="id" type="long">
             <generator class="identity"/> <!-- MySQL strategy for generating id's AI, other DB sequence -->
         </id>
         <property name="name" column="name" type="string"/>
-        <property name="registrationDate" column="registrationDate" type="timestamp"/>
+        <property name="registrationDate" column="registrationDate" type="date"/>
     </class>
 </hibernate-mapping>
