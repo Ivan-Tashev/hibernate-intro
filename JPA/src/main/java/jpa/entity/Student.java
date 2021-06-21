@@ -5,7 +5,7 @@ import java.util.Date;
 import java.util.Objects;
 
 @Entity // how java see it
-@Table(name = "students") // mapping to the databe table
+@Table(name = "students") // mapping to the database table
 public class Student {
     @Id // Primary Key, can be placed on the Getter
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -20,6 +20,11 @@ public class Student {
 
     public Student(String name) {
         this.name = name;
+    }
+
+    public Student(String name, Date registrationDate) {
+        this.name = name;
+        this.registrationDate = registrationDate;
     }
 
     public Student(Long id, String name, Date registrationDate) {
